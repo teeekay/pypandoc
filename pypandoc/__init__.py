@@ -308,6 +308,12 @@ def _convert_input(source, format, input_type, to, extra_args=(),
     if filters is not None:
         if isinstance(filters, string_types):
             filters = filters.split()
+        filter_args = []
+        for f in filters:
+            if f.lower().endswith('.lua'):
+                filter_args.append('--lua-filter=' + f)
+            else:
+                filter_args.append('--filter=' + f)
         f = ['--filter=' + x for x in filters]
         args.extend(f)
 
