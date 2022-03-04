@@ -78,7 +78,7 @@ module = pypandoc
 setup(
     name = 'pypandoc',
     version = module.__version__,
-    url = 'https://github.com/bebraw/pypandoc',
+    url = 'https://github.com/teeekay/pypandoc',
     license = 'MIT',
     description = 'Thin wrapper for pandoc.',
     long_description = long_description,
